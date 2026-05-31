@@ -1,5 +1,13 @@
-import { Button, AnimatedBorderButton} from "@/components/Button";
-import { ArrowRight, Download } from "lucide-react";
+import { Button, } from "@/components/Button";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import {
+  ArrowRight,
+  ChevronDown,
+  GithubIcon,
+  Linkedin,
+  Twitter,
+  Download,
+} from "lucide-react";
 
 export const  Hero = () => {
     return (
@@ -56,10 +64,37 @@ export const  Hero = () => {
                              Hi, I'm Wilborn Kipkoech - a Telecommunications Engineer and Fullstack Developer specializing in bridging the gap between hardware architecture and the modern web. With deep expertise across the PERN (PostgreSQL, Express, React, Node.js) stack, I build scalable, high-performance web applications that don't just look great, but are engineered from the network layer up.  
                         </p>
                     </div>
-
+ 
                     {/* Call to Action Buttons */}
-                    <Button size="lg">Get in Touch <ArrowRight className="w-5 h-5"/> </Button>
-                    <AnimatedBorderButton/>
+                        <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+                            <Button size="lg">Get in Touch <ArrowRight className="w-5 h-5" /> </Button>
+                            <AnimatedBorderButton />
+                        </div>
+
+                    {/* Social Media Links */}
+                        <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+                            <span className="text-sm text-muted-foreground">Follow me: </span>
+                            {[
+                                { icon: GithubIcon, href: "#" }, // <-- Match capital H here
+                                { icon: Linkedin, href: "#" },
+                                { icon: Twitter, href: "#" },
+                            ].map((social, idx) => {
+                                // Safe, clean way to render dynamic components in React
+                                const Icon = social.icon;
+
+                                return (
+                                    <a
+                                        key={idx}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                                    >
+                                        <Icon className="w-5 h-5" />
+                                    </a>
+                                );
+                            })}
+                        </div>
                 </div>
                     {/* right column - Image */}
             </div>
