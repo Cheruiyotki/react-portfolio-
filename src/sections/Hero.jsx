@@ -15,6 +15,8 @@ const skills = [
     "HTML",
     "BootstrapCSS",
     "TailwindCSS",
+    "Python",
+    "Flask",
     "JavaScript",
     "React",
     "Node.js",
