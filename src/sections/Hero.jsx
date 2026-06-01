@@ -65,7 +65,7 @@ export const  Hero = () => {
                                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/>Telecommunications Engineer * Fullstack Developer 
                             </span>
                         <span className="text-xs  ">
-                            Pern Specialist
+                             QA/QE
                         </span>
                         </span>
                     </div>
@@ -141,18 +141,24 @@ export const  Hero = () => {
                     </div>
             </div>
             {/* skills section */}
-            <div>
-                <p>Techmologies I work with:</p>
-                <div>
-                    <div>
+            <div className="mt-20 animate-fade-in animation-delay-600">
+                <p className="text-sm  text-muted-foreground mb-6 text-center">Techmologies I work with:</p>
+                <div className="relative overflow-hidden ">
+                    <div className="flex animate-marquee">
                         {[...skills].map((skill, idx) => (
-                            <div>
-                                <span>{skill}</span>
+                            <div key={idx} className="flex-shrink-0 px-8 py-4">
+                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in transition-delay-700">
+            <a href="#about" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-muted-foreground/80 transition-colors">
+                <span className="text-xs uppercase tracking-wider">Scroll</span>
+                <ChevronDown className="w-5 h-5 animate-bounce" />
+            </a>
         </div>
     </ section>
     );
