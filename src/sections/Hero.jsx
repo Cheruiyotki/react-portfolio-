@@ -1,13 +1,34 @@
 import { Button, } from "@/components/Button";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import {
-  ArrowRight,
-  ChevronDown,
-  GithubIcon,
-  Linkedin,
-  Twitter,
-  Download,
+    ArrowRight,
+    ChevronDown,
+    GithubIcon,
+    Linkedin,
+    Twitter,
+    Download,
 } from "lucide-react";
+
+
+const skills = [
+    "Telecommunications Engineering",
+    "HTML",
+    "BootstrapCSS",
+    "TailwindCSS",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "MySQL",
+    "Prisma",
+    "Jest",
+    "Cypress",
+    "Git",
+    "Github",
+    "Quality Assurance",
+];
+
+
 
 export const  Hero = () => {
     return (
@@ -75,11 +96,11 @@ export const  Hero = () => {
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                             <span className="text-sm text-muted-foreground">Follow me: </span>
                             {[
-                                { icon: GithubIcon, href: "#" }, // <-- Match capital H here
+                                { icon: GithubIcon, href: "#" }, 
                                 { icon: Linkedin, href: "#" },
                                 { icon: Twitter, href: "#" },
                             ].map((social, idx) => {
-                                // Safe, clean way to render dynamic components in React
+                               
                                 const Icon = social.icon;
 
                                 return (
@@ -97,6 +118,40 @@ export const  Hero = () => {
                         </div>
                 </div>
                     {/* right column - Image */}
+                    <div className="relative animate-fade-in animation-delay-300">
+                        {/*Profile Image */}
+                        <div className="relative max-w-md mx-auto">
+                            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/30 blur-2xl animate-pulse "/> 
+                            <div className="relative glass rounded-3xl p-2 glow-border">
+                                <img src="/profile-photo.jpeg" alt="Wilborn Kipkoech" className="w-full aspect-[4/5] object-cover rounded-2xl" />
+                                {/* FLoating badge */}
+                                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                                    <div className="flex items-center gap-3 ">
+                                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/>
+                                        <span className="text-sm font-medium ">Available For work</span>
+                                    </div>
+                                </div>
+                                {/*  Stats Badge*/}
+                                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                                    <div className="text-2xl font-bold text-primary">2+</div>
+                                    <div className="text-xs text-muted-foreground">Years of Experience</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            {/* skills section */}
+            <div>
+                <p>Techmologies I work with:</p>
+                <div>
+                    <div>
+                        {[...skills].map((skill, idx) => (
+                            <div>
+                                <span>{skill}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     </ section>
