@@ -64,7 +64,26 @@ export const  About = () => {
                     I care a lot about writing maintainable code and making sure applications work properly through testing and QA. Using tools like Jest and Cypress, I focus on building software that is stable, secure, and easy to improve over time.
                 </p>
             </div>
+
+            <div className="glass rounded-2xl  p-6 glow-border animate-fade-in animation-delay-300">
+                            <p className="text-lg font-medium italic text-foreground">"My mission is to build reliable and scalable digital solutions that connect engineering thinking with modern software development, creating technology that is practical, efficient, and useful in everyday life.
+                                "</p>
+            </div>
           </div>
+
+            {/* Right side content */}
+            <div className="grid sm:grid-cols-2 gap-6">
+                {higlights.map((item, index) => ( 
+                    <div key={index} className="glass p-6 rounded-2xl animate-fade-in "
+                    style={{animateDelay: `${( index +1 ) * 100}ms`}}>
+                        <div  className="w-12 h-12 rounded-xl   bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                            <item.icon size={28} className="w-6 h-6 text-primary"/>
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground mb-2 mt-4">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     </div>
     </ section>
