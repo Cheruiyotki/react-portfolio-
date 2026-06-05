@@ -23,6 +23,17 @@ const contactInfo = [
 ];
 
 export const  Contact = () => {
+    const [formData, setFormData] = useState ({
+        name: "",
+        email: "",
+        message: ""
+    });
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    }
+
+
     return (<section id="contact" className="py-32 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -53,20 +64,41 @@ export const  Contact = () => {
                     <form action=" " className="space-y-6 ">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                            <input type="text"   id="name" required placeholder="Your name..."
+                            <input 
+                            type="text"   
+                            id="name" required 
+                            placeholder="Your name..."
+                             value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                             className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
                         </div>
                         <div>
                             <label htmlFor="email"
                             className="block text-sm font-medium mb-2"
                             >Email</label>
-                            <input type="email" name="" id="email" required placeholder="your@email.com" 
+                            <input 
+                            type="email" 
+                            name="" id="email" 
+                             value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData,  email: e.target.value })
+                  }
+                            required placeholder="your@email.com" 
                             className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
                         </div>
                         <div>
                             <label htmlFor="message" className="block text-sm font-medium mb-2"
                             >Message</label>
-                            <textarea rows={5} type="text" name="" id="" placeholder="Your message..."
+                            <textarea 
+                            rows={5} 
+                            type="text" name="" 
+                             value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData,  message: e.target.value })
+                  }
+                            id="" placeholder="Your message..."
                             className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
                         </div>
 
