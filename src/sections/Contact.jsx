@@ -32,6 +32,10 @@ export const  Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        try {
+            
+        }
     }
 
 
@@ -62,7 +66,7 @@ export const  Contact = () => {
 
             <div className=" grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto ">
                 <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in ">
-                    <form action=" " className="space-y-6 ">
+                    <form action=" " className="space-y-6 " onSubmit={handleSubmit} >
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                             <input 
