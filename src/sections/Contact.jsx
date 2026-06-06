@@ -1,6 +1,7 @@
 import {Mail, Phone, MapPin, Send} from "lucide-react"
 import { Button, } from "@/components/Button";
 import { useState } from "react";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
 const contactInfo = [
   {
@@ -30,13 +31,40 @@ export const  Contact = () => {
         message: ""
     });
 
+    const [isLoading, setIsLoading] = useState(false);
+    const[submitStatus, setSubmitStatus] = useState({
+        type: null,
+        message: "",
+    });
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        setIsLoading(true);
+        setSubmitStatus({type: null, message: ""});
+
         try {
-            
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+            if (!serviceId || !templateId || !publicKey) {
+        throw new Error(
+          "EmailJS configuration is missing. Please check your environment variables."
+        );
+      }
+
+      await emailjs.send(serviceId, templateId, {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }, publicKey)
+        } catch (err) {
+
+        } finally {
+            setIsLoading(false);
         }
-    }
+    };
 
 
     return (<section id="contact" className="py-32 relative overflow-hidden">
