@@ -58,10 +58,22 @@ export const  Contact = () => {
         name: formData.name,
         email: formData.email,
         message: formData.message,
-      }, publicKey)
-        } catch (err) {
+      }, publicKey);
 
-        } finally {
+      setSubmitStatus({
+        type: "Success",
+        message: "Message sent successfully! I'll get back to you soon."
+      });
+      setFormData({name: "", email: "", message: ""})
+
+        } catch (err) {
+            console.error("EmailJS error:", error);
+            setSubmitStatus({
+                type: "error",
+                message:
+                    error.text || "Failed to send message. Please try again later.",
+            });
+        } finally { 
             setIsLoading(false);
         }
     };
@@ -135,9 +147,13 @@ export const  Contact = () => {
                             className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
                         </div>
 
-                        <Button classNamew-full type ="submit" size="lg">
-                            Send Message
-                            <Send/>
+                        <Button 
+                        classNamew-full 
+                        type ="submit" 
+                        size="lg"
+                        disabled={isLoading}>
+                            {<>Send Message
+                                <Send /></>}
                         </Button>
                     </form>
                 </div>
