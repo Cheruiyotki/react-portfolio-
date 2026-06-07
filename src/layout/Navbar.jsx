@@ -42,11 +42,13 @@ export const Navbar = () => {
             </div>
 
             {/*  CTA button */}
-            <div className="hidden md:block ">
-               <Button id="contact" size="sm">
+          <div className="hidden md:block ">
+            <a href="#contact">
+              <Button size="sm">
                 Contact Me
-               </Button>
-            </div>
+              </Button>
+            </a>
+          </div>
 
 
             {/* Mobile  MEnu button */}
