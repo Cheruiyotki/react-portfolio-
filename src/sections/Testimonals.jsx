@@ -4,21 +4,21 @@ import { useState } from "react";
 const testimonials = [
   {
     quote:
-      "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
+      "Cheruiyot is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
     author: "Sarah Chen",
     role: "CTO, Tech Innovators Inc.",
     
   },
   {
     quote:
-      "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
+      "Working with Cheruiyot  was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
     author: "Michael Rodriguez",
     role: "Product Manager, Digital Solutions",
     
   },
   {
     quote:
-      "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
+      "Cheruiyot's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
     author: "Emily Watson",
     role: "Engineering Lead, StartUp Labs",
     
