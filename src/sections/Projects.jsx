@@ -9,7 +9,7 @@ const projects = [
         image: "/projects/hotelbooking.jpeg",
         tags: ["React", "Node.js", "Express" ],
         github: "",
-        link: ""
+        link: "https://grand-hotel-nu.vercel.app/"
     },
     {
         title: "codeAI",
