@@ -17,14 +17,14 @@ const projects = [
         image: "/projects/codeAI.jpeg",
         tags: ["Python", "Machine Learning", "React" ],
         github: "https://github.com/Cheruiyotki/codeAI",
-        link: ""
+        link: "https://code-ai-beryl.vercel.app/"
     },
     {
         title: "Vacations App",
         description: "A travel planning application that allows users to discover and book vacation destinations with ease.",
         image: "/projects/platinumVacations.jpeg",
         tags: ["React", "Node.js", "Express", "PostgreSQL" ],
-        github: "",
+        github: "https://github.com/Cheruiyotki/platinum-vacations",
         link: ""
     },
     {
@@ -32,8 +32,8 @@ const projects = [
         description: "An e-commerce platform for selling technology products with a focus on user experience and seamless integration.",
         image: "/projects/onlineTechstore.jpeg",
         tags: ["React", "Python", "Express", "PostgreSQL" ],
-        github: "",
-        link: ""
+        github: "https://github.com/Cheruiyotki/kimeres-sollutions",
+        link: "https://kimeres-sollutions.onrender.com/"
     }
 ]
 
