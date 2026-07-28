@@ -8,7 +8,7 @@ const projects = [
         description: "A fullstack hotel booking application built with the PERN stack. It features user authentication, hotel listings, booking management, and a responsive design for seamless user experience across devices.",
         image: "/projects/hotelbooking.jpeg",
         tags: ["React", "Node.js", "Express" ],
-        github: "",
+        github: "https://github.com/Cheruiyotki/Grand-Hotel",
         link: "https://grand-hotel-nu.vercel.app/"
     },
     {
@@ -16,7 +16,7 @@ const projects = [
         description: "An AI-powered code completion tool designed to enhance developer productivity by providing intelligent code suggestions in real-time.",
         image: "/projects/codeAI.jpeg",
         tags: ["Python", "Machine Learning", "React" ],
-        github: "",
+        github: "https://github.com/Cheruiyotki/codeAI",
         link: ""
     },
     {
