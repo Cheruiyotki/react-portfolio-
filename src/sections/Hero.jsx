@@ -103,7 +103,7 @@ export const  Hero = () => {
                             {[
                                 { icon: GithubIcon, href: "https://github.com/Cheruiyotki" }, 
                                 { icon: Linkedin, href: "#" },
-                                { icon: Twitter, href: "#" },
+                                { icon: Twitter, href: "https://x.com/TechTrekKenya" },
                             ].map((social, idx) => {
                                
                                 const Icon = social.icon;
