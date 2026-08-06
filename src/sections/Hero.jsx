@@ -102,7 +102,7 @@ export const  Hero = () => {
                             <span className="text-sm text-muted-foreground">Follow me: </span>
                             {[
                                 { icon: GithubIcon, href: "https://github.com/Cheruiyotki" }, 
-                                { icon: Linkedin, href: "#" },
+                                { icon: Linkedin, href: "https://www.linkedin.com/in/wilborn-kipkoech-38524a426?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
                                 { icon: Twitter, href: "https://x.com/TechTrekKenya" },
                             ].map((social, idx) => {
                                
